@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import { AddCircledOutline } from 'iconoir-react'
+import styles from './SearchBar.module.css'
 
-function SearchBar() {
+function SearchBar(props) {
     const [input, setInput] = useState("")
 
     const handleInput = (e) => {
@@ -11,14 +11,27 @@ function SearchBar() {
 
     const handleButton = (e) => {
         e.preventDefault()
-        console.log(input)
-        setInput("")
+        if(input !== ""){
+            props.onSearch(input)
+            setInput("")
+        }else{
+            alert("¡You must enter a city!")
+        }
     }
     return (
-        <div>
-            <input value={input} onChange={handleInput} placeholder='City...' />
-            <button onClick={handleButton} >
-                <AddCircledOutline />
+        <div className={styles.search}>
+            <input 
+                className={styles.input} 
+                type='text' 
+                value={input} 
+                onChange={handleInput} 
+                placeholder='City...'
+            />
+            <button 
+                className={styles.btn} 
+                onClick={handleButton}
+            >
+            Search
             </button>
         </div>
     )

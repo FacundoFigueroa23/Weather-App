@@ -1,3 +1,15 @@
 .App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  background: url(./assets/53625.jpg) no-repeat center center fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  font-size: 50px;
+  color: #B7CADB;
 }
