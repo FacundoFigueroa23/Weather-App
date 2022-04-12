@@ -9,7 +9,7 @@ function App() {
 
   async function onSearch(cityName){
     try{
-      const city = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
+      const city = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
       const newCity = {
       name: city.data.name,
       min: Math.round(city.data.main.temp_min),
