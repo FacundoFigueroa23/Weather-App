@@ -11,11 +11,14 @@ export default function Card(props) {
           <h5>Min</h5>
           {props.min}°
         </div>
+        <div className={styles.descriptionContainer}>
+          <img className={styles.img} src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="Weather icon"/>
+          <p className={styles.description}>{props.description}</p>
+        </div>
         <div>
           <h5>Max</h5>
           {props.max}°
         </div>
-        <img className={styles.img} src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="Weather icon"/>
       </section>
     </div>
   )

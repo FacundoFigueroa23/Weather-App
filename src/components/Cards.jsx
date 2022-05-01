@@ -13,6 +13,7 @@ export default function Cards(props) {
                 min={city.min}
                 name={city.name}
                 img={city.img}
+                description={city.description}
                 onClose={props.onClose}/>
           ))
       }
