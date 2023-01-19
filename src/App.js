@@ -34,15 +34,15 @@ function App() {
       <SearchBar onSearch={onSearch}/>
       <Cards cities={cities} onClose={onClose}/>
       <nav className='footer'>
-        <a className='link' href='https://www.linkedin.com/in/facundo-figueroa-dev' target ='_blank' rel="noreferrer">
+        <a className='link' href='https://www.linkedin.com/in/facu-figueroa' target ='_blank' rel="noreferrer">
           <p>LinkedIn</p>
         </a>
         <a className='link' href='https://github.com/FacundoFigueroa23' target ='_blank' rel="noreferrer">
           <p>GitHub</p>
         </a>
-        <button className='link' onClick={() => alert("Currently working on it")}>
+        <a className='link' href='https://facundofigueroa.vercel.app' target ='_blank' rel="noreferrer">
           <p>Portfolio</p>
-        </button>
+        </a>
       </nav>
     </div>
   );
